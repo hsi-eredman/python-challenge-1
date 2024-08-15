@@ -132,7 +132,6 @@ while place_order:
                     # Store the item name as a variable
                     menu_selection = menu_items[customer_selection]
 
-
                     # Ask the customer for the quantity of the menu item
                     quantity = input("Enter the amount you wish to order: ")
 
@@ -176,7 +175,6 @@ while place_order:
             place_order = True
         case 'n':
             place_order = False
-            break
         case _:
             print("Invalid input, please try again.")
 
@@ -188,10 +186,6 @@ print("\nThank you for your order!")
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
-
-# Uncomment the following line to check the structure of the order
-# print(order_list)
-
 print("Item name                 | Price  | Quantity")
 print("--------------------------|--------|----------")
 
@@ -219,7 +213,6 @@ for item in order_list:
 
     # Print the item name, price, and quantity
     print(f"{item_name}{after_item_spaces}| ${item_price}{after_price_space} | {item_quantity}")
-
 
 # Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
