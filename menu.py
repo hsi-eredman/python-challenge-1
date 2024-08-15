@@ -133,7 +133,7 @@ while place_order:
                     menu_selection = menu_items[menu_selection]
 
                     # Ask the customer for the quantity of the menu item
-                    quantity = input("Enter the amount you wish to order, pressing enter or submiting an invalid input will default the quantity to 1: ")
+                    quantity = input("Enter the amount you wish to order, pressing enter or submitting an invalid input will default the quantity to 1: ")
 
                     # Check if the quantity is a number, default to 1 if not
                     if quantity.isdigit():
