@@ -118,23 +118,22 @@ while place_order:
                     }
                     i += 1
             # Ask customer to input menu item number
-            customer_selection = input("Please enter the number of the item you want to order: ")
+            menu_selection = input("Please enter the number of the item you want to order: ")
 
             # Check if the customer typed a number
-            if customer_selection.isdigit():
+            if menu_selection.isdigit():
 
                 # Convert the menu selection to an integer
-                customer_selection = int(customer_selection)
+                menu_selection = int(menu_selection)
 
                 # Check if the menu selection is in the menu items
-                if customer_selection in menu_items.keys():
+                if menu_selection in menu_items.keys():
 
                     # Store the item name as a variable
-                    menu_selection = menu_items[customer_selection]
+                    menu_selection = menu_items[menu_selection]
 
                     # Ask the customer for the quantity of the menu item
-                    quantity = input("Enter the amount you wish to order: ")
-
+                    quantity = input("Enter the amount you wish to order, pressing enter or submiting an invalid input will default the quantity to 1: ")
 
                     # Check if the quantity is a number, default to 1 if not
                     if quantity.isdigit():
@@ -150,7 +149,7 @@ while place_order:
 
                 # Tell the customer that their input isn't valid
                 else:
-                    print(f"{customer_selection} was not a menu option.")
+                    print(f"{menu_selection} was not a menu option.")
 
             # Tell the customer they didn't select a number
             else:
